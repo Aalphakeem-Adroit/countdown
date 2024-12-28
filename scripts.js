@@ -15,15 +15,18 @@ var countdownFunction = setInterval(function() {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // Output the result in an element with id="countdown"
-  document.getElementById("days").innerHTML = days;
-  document.getElementById("hours").innerHTML = hours;
-  document.getElementById("minutes").innerHTML = minutes;
-  document.getElementById("seconds").innerHTML = seconds;
-
-  // If the countdown is finished, write some text
+  // If the countdown is finished, set all values to 00
   if (distance < 0) {
     clearInterval(countdownFunction);
-    document.getElementById("countdown").innerHTML = "WE'VE LAUNCHED";
+    document.getElementById("days").innerHTML = "00";
+    document.getElementById("hours").innerHTML = "00";
+    document.getElementById("minutes").innerHTML = "00";
+    document.getElementById("seconds").innerHTML = "00";
+  } else {
+    // Output the result in an element with id="countdown"
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
   }
 }, 1000);

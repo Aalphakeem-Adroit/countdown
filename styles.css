@@ -52,7 +52,7 @@ header h2 {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
 .timer .duration {
@@ -97,7 +97,7 @@ header h2 {
 }
 
 .timer .duration > .value > p {
-    position: fixed;
+    position: absolute;
     text-align: center;
     align-self: center;
     font-weight: 700;
