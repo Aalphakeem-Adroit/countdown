@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Primary */
+    --GrayishBlue: hsl(237, 18%, 59%);
+    --SoftRed: hsl(345, 95%, 68%);
+
+    /* Neutral */
+    --White: hsl(0, 0%, 100%);
+    --DarkDesaturatedBlue: hsl(236, 21%, 26%);
+    --VeryDarkBlue: hsl(235, 16%, 14%);
+    --VeryDarkMostlyBlackBlue: hsl(234, 17%, 12%);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./images/bg-stars.svg);
+    background-color: var(--VeryDarkBlue);
+    font-family: "Red Hat Text", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--White);
+    letter-spacing: .5rem;
+    margin-bottom: 50px;
+}
+
+.timer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.timer .duration {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timer .duration > p {
+    color: var(--GrayishBlue);
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-size: 9px;
+    font-weight: 700;
+    opacity: .7;
+}
+
+.timer .duration > .value {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    background-color: var(--VeryDarkMostlyBlackBlue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: var(--VeryDarkMostlyBlackBlue) 5px 5px;
+}
+
+.timer .duration > .value .upShape {
+    height: 50%;
+    background-color: var(--DarkDesaturatedBlue);
+    border-radius: 4px 4px 10px 10px;
+    opacity: .6;
+}
+
+.timer .duration > .value .downShape {
+    height: 50%;
+    background-color: var(--GrayishBlue);
+    border-radius: 10px 10px 4px 4px;
+    opacity: .2;
+}
+
+.timer .duration > .value > p {
+    position: fixed;
+    text-align: center;
+    align-self: center;
+    font-weight: 700;
+    font-size: 42px;
+    color: var(--SoftRed);
+}
+
+.media {
+    width: 100vw;
+    height: 20vh;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./images/pattern-hills.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.media img {
+    padding: 20px;
+}
